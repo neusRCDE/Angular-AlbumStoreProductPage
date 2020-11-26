@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
 import { ProductService } from './product.service';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductPageComponent,
-    ProductDescriptionComponent
+    ProductDescriptionComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +23,7 @@ import { ProductService } from './product.service';
     HttpModule
   ],
   providers: [ProductService],
+  exports: [ ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
